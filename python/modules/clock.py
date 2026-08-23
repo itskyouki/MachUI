@@ -1,7 +1,7 @@
 from datetime import datetime
 
 def get_time():
-    hour = datetime.now().strftime("%I")
+    hour = int(datetime.now().strftime("%I"))
     minute = datetime.now().minute
     second = datetime.now().second
     clock_info = {
