@@ -1,5 +1,5 @@
 # MachUI v0.1
-A sleek Linux desktop shell with an aircraft theme built off quickshell
+A sleek Linux desktop shell with an aircraft theme built off Quickshell
 
 ## About
 Created to learn Quickshell, Python and have my own desktop shell
