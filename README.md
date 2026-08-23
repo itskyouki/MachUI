@@ -6,6 +6,7 @@ Created to learn Quickshell, Python and have my own desktop shell
 
 ## Credits
 SwayFX is the Wayland compositor i used to run MachUI
+
 Made by Me
 
 
