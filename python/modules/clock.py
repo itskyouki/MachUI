@@ -10,4 +10,3 @@ def get_time():
         "second": second
     }
     return(clock_info)
-get_time()
