@@ -1,11 +1,13 @@
-import QtQuick
 import Quickshell
 import Quickshell.Io
+import "quickshell"
 
-Item {
-    Process{
-        command: ["python",Qt.resolvedUrl("python/main.py")]
+
+ShellRoot {
+    Process {
+        command: ["python", Quickshell.shellPath("python/main.py")]
         running: true
     }
 
+    Main {}
 }
