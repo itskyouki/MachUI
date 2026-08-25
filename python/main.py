@@ -2,28 +2,38 @@ import time
 from modules import clock
 from modules import battery
 from modules import weather
+from modules import autolocation
 
-# start up stuff
-clock_info = clock.get_time()
-battery_info = battery.get_battery()
-weather_info = weather.get_weather()
+#startup without a return
+autolocation.get_location()
+clock.get_time()
+battery.get_battery()
+weather.get_weather()
 
 # loop stuff
 current_time = time.time()
 lu_clock = current_time
 lu_battery = current_time
 lu_weather = current_time
+lu_location = current_time
 
 #main data loop
 while True:
     current_time = time.time()
+
     if current_time - lu_clock >= 1:
-        clock_info = clock.get_time()
+        clock.get_time()
         lu_clock = current_time
+
     if current_time - lu_battery >= 4:
-            battery_info = battery.get_battery()
+            battery.get_battery()
             lu_battery = current_time
+
     if current_time - lu_weather >= 7200:
-        weather_info = weather.get_weather()
+        weather.get_weather()
         lu_weather = current_time
+
+    if current_time - lu_location >= 3600:
+            autolocation.get_location()
+            lu_location = current_time
     time.sleep(0.1)
