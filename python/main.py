@@ -7,7 +7,11 @@ import shutil
 from pathlib import Path
 
 data_dir = Path(__file__).parent.parent / "data"
-shutil.rmtree(data_dir, ignore_errors=True)
+
+if not data_dir.exists():
+    data_dir.mkdir()
+
+shutil.rmtree(data_dir)
 data_dir.mkdir()
 autolocation.get_location()
 clock.get_time()

@@ -20,5 +20,5 @@ def get_location():
         json.dump(location_info, locationfile)
     return location_info
 
-get_location()
+
 
