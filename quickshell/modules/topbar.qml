@@ -1,5 +1,5 @@
-import Quickshell // for PanelWindow
-import QtQuick // for Text
+import Quickshell
+import QtQuick
 
 PanelWindow {
   anchors {
