@@ -3,8 +3,12 @@ from modules import clock
 from modules import battery
 from modules import weather
 from modules import autolocation
+import shutil
+from pathlib import Path
 
-#startup without a return
+data_dir = Path(__file__).parent.parent / "data"
+shutil.rmtree(data_dir, ignore_errors=True)
+data_dir.mkdir()
 autolocation.get_location()
 clock.get_time()
 battery.get_battery()

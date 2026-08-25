@@ -3,15 +3,18 @@ from pathlib import Path
 import json
 
 def get_weather():
-    # data path
-    weather_file = Path(__file__).parent.parent.parent / "data" / "weather.json"
-    with open("data/location.json", "r") as file:
+    # data paths
+    data_dir = Path(__file__).parent.parent.parent / "data"
+    weather_file = data_dir / "weather.json"
+    location_file = data_dir / "location.json"
+
+    with open(location_file, "r") as file:
         location_info = json.load(file)
-        city = location_info["city"]
-        country = location_info["country"]
+
         timezone = location_info["timezone"]
         latitude = location_info["latitude"]
         longitude = location_info["longitude"]
+
     url = (
         "https://api.open-meteo.com/v1/forecast?"
         f"latitude={latitude}&longitude={longitude}"
