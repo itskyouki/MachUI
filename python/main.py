@@ -36,4 +36,5 @@ while True:
     if current_time - lu_location >= 3600:
         autolocation.get_location()
         lu_location = current_time
+
     time.sleep(0.1)
