@@ -4,11 +4,12 @@ import QtQuick
 PanelWindow {
   anchors {
     top: true
-    left: true
-    right: true
+    left: false
+    right: false
   }
 
   implicitHeight: 30
+  implicitWidth: 1270
 
   Text {
     // center the bar in its parent component (the window)

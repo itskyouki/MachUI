@@ -1,6 +1,8 @@
-import Quickshell 
-import QtQuick 
+import Quickshell
+import QtQuick
+import "./modules"
 
-Item{
-
+Scope {
+    Topbar {}
+    Power{}
 }
