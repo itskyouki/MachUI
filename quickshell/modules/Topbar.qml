@@ -2,19 +2,37 @@ import Quickshell
 import QtQuick
 
 PanelWindow {
-  anchors {
-    top: true
-    left: false
-    right: false
-  }
+    anchors {
+        top: true
+        left: true
+        right: true
+    }
+    margins{
+        top: 10
+        left: 18
+        right: 18
+    }
 
-  implicitHeight: 30
-  implicitWidth: 1270
+    implicitHeight: 40
+    color: "transparent"
 
-  Text {
-    // center the bar in its parent component (the window)
-    anchors.centerIn: parent
+    Rectangle {
+        anchors.fill: parent
 
-    text: "text box, put the dumped clock.json from the clock.py module"
-  }
+        color: "#080808"
+        border.width: 1
+        border.color: "#FFFFFF"
+        radius: 10
+
+        Text {
+            anchors.centerIn: parent
+
+            text: "text box, put the dumped clock.json from the clock.py module"
+
+            color: "#ffffff"
+            font.family: "monospace"
+            font.pixelSize: 10
+            font.bold: false
+        }
+    }
 }

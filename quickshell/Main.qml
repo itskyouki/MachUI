@@ -4,5 +4,5 @@ import "./modules"
 
 Scope {
     Topbar {}
-    Power{}
+
 }
