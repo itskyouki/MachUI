@@ -5,7 +5,7 @@ import Quickshell.Wayland
 
 PanelWindow {
     id: home
-    visible: true
+    visible: false
     WlrLayershell.layer: WlrLayer.Overlay
 
     anchors {
