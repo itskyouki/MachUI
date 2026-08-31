@@ -3,9 +3,10 @@ from modules import clock
 from modules import battery
 from modules import weather
 from modules import autolocation
+from modules import date
 import shutil
 from pathlib import Path
-
+#startup
 data_dir = Path(__file__).parent.parent / "data"
 
 if not data_dir.exists():
@@ -16,6 +17,7 @@ data_dir.mkdir()
 autolocation.get_location()
 clock.get_time()
 battery.get_battery()
+date.get_date()
 weather.get_weather()
 
 # loop stuff
@@ -24,6 +26,7 @@ lu_clock = current_time
 lu_battery = current_time
 lu_weather = current_time
 lu_location = current_time
+lu_date = current_time
 
 #main data loop
 while True:
@@ -44,5 +47,6 @@ while True:
     if current_time - lu_location >= 3600:
         autolocation.get_location()
         lu_location = current_time
-
-    time.sleep(0.1)
+   if current_time - lu_date >= 86400:
+        date.get_date()
+        lu_date = current_time
