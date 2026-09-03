@@ -5,4 +5,5 @@ import "./modules"
 Scope {
     Topbar {}
     Home{}
+    Launcher{}
 }
